@@ -17,16 +17,16 @@ HELPER_BIN = helper
 all: $(SERVER_BIN) $(CLIENT_BIN) $(HELPER_BIN)
 
 $(SERVER_BIN): $(SERVER_OBJ)
-    $(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 $(CLIENT_BIN): $(CLIENT_OBJ)
-    $(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 $(HELPER_BIN): $(HELPER_OBJ)
-    $(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 %.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-    rm -f $(SERVER_OBJ) $(CLIENT_OBJ) $(HELPER_OBJ) $(SERVER_BIN) $(CLIENT_BIN) $(HELPER_BIN)
+	rm -f $(SERVER_OBJ) $(CLIENT_OBJ) $(HELPER_OBJ) $(SERVER_BIN) $(CLIENT_BIN) $(HELPER_BIN)
